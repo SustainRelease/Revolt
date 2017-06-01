@@ -1,0 +1,61 @@
+#myModal {
+  display: block;
+  z-index: 1;
+  width: auto;
+  height: 550px;
+  padding: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 750px;
+  max-width: 1200px;
+  height: 550px;
+}
+
+.mySlides {
+  padding: 25px 5px;
+  display: none;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 5px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(20, 0, 20, 0.5);
+}
+
+
+img.slide {
+  height: 500px;
+  width: auto;
+  border: solid 1px black;
+  border-radius: 10px;
+}

@@ -1,0 +1,18 @@
+extends ./layout.pug
+
+block content
+    section(class="large")
+      p Revolt amène l'ethical fashion dans la capitale parisienne et vous propose de découvrir des créateurs mexicains soucieux de leur communauté et de l'environnement
+    section#myModal.modal
+      .modal-content
+        .mySlides(name = "img1")
+          img.slide(src="/static/images/img1.jpg")
+        .mySlides(name = "img2")
+          img.slide(src="/static/images/img2.jpg")
+        .mySlides(name = "img3")
+          img.slide(src="/static/images/img3.jpg")
+        .mySlides(name = "img4")
+          img.slide(src="/static/images/img4.jpg")
+
+        a.prev(onclick="plusSlides(-1)") &#10094;
+        a.next(onclick="plusSlides(1)") &#10095;
