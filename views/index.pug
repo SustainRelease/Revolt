@@ -1,9 +1,9 @@
 extends ./layout.pug
 
 block content
-    section(class="large")
+    div(class="large normal")
       p Revolt amène l'ethical fashion dans la capitale parisienne et vous propose de découvrir des créateurs mexicains soucieux de leur communauté et de l'environnement
-    section#myModal.modal
+    div#myModal.modal
       .modal-content
         .mySlides(name = "img1")
           img.slide(src="/static/images/img1.jpg")
@@ -16,3 +16,5 @@ block content
 
         a.prev(onclick="plusSlides(-1)") &#10094;
         a.next(onclick="plusSlides(1)") &#10095;
+        
+    script(src='/static/javascripts/lightbox.js')

@@ -1,6 +1,9 @@
-nav#mainNav.navbar.navbar-default.navbar-fixed-top
-	div.flex-container
-		div.flex-item
+nav#mainNav
+	div#standingLogo
+		a(href="/")
+			img(src="static/images/profileSlim.png" alt="Revolt").profile
+	div.flex-container#middleRow
+		div.flex-item#inlineLogo
 			a(href="/")
 				img(src="static/images/profileSlim.png" alt="Revolt").profile
 		div.flex-item
@@ -9,8 +12,12 @@ nav#mainNav.navbar.navbar-default.navbar-fixed-top
 			a.page-scroll(href='about') About
 		div.flex-item
 			a.page-scroll(href='designers') Designers
-		div.flex-item
+		div.flex-item.shifters
 			a.page-scroll(href='portfolio') Portfolio
-		div.flex-item
+		div.flex-item.shifters
 			a.page-scroll(href='contact') Contact
-div#navBuffer
+	div.flex-container#bottomRow
+		div.flex-item.shifters
+			a.page-scroll(href='portfolio') Portfolio
+		div.flex-item.shifters
+			a.page-scroll(href='contact') Contact

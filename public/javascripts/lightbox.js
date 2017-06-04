@@ -24,7 +24,7 @@ function showSlide(n) {
   var oldn = slideIndex;
   var opac = 0;
   if (n >= slides.length) {n = 0}
-  if (n < 0) {n = slides.length}
+  if (n < 0) {n = slides.length - 1}
   slideIndex = n;
   //console.log("Old index: " + oldn);
   //console.log("New index: " + n);

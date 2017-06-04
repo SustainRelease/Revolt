@@ -1,8 +1,8 @@
 #myModal {
   display: block;
   z-index: 1;
-  width: auto;
-  height: 550px;
+  max-width: 100%;
+  height: auto;
   padding: auto;
   background-color: black;
 }
@@ -12,9 +12,8 @@
   position: relative;
   margin: auto;
   padding: 0;
-  width: 750px;
-  max-width: 1200px;
-  height: 550px;
+  max-width: 100%;
+  height: auto;
 }
 
 .mySlides {
@@ -54,8 +53,8 @@
 
 
 img.slide {
-  height: 500px;
-  width: auto;
+  height: auto;
+  max-width: 100%;
   border: solid 1px black;
   border-radius: 10px;
 }
