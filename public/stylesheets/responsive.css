@@ -1,0 +1,99 @@
+@media screen and (min-width: 480px) {
+  #bottomRow {
+    display: none;
+    height: 0px;
+  }
+  #middleRow .shifters{
+    display: block;
+  }
+
+  div.normal.designer {
+    min-height: 272px;
+  }
+
+  div.normal.designer.short {
+    min-height: 222px;
+  }
+
+  img.designer { /* total height: 200 + 2 + 20 =  222*/
+    display: inline;
+    height: 200px;
+    width: auto;
+    margin: 0 0 20px 0;
+  }
+
+  img.designer.wide {
+    height: 150px;
+  }
+
+  div.normal:nth-child(even) img.designer {
+    float: right;
+    margin-left: 20px;
+  }
+
+  div.normal:nth-child(odd) img.designer {
+    float: left;
+    margin-right: 20px;
+  }
+
+  div.normal {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  /* Two rows: Title and buttons */
+  nav {
+    position: fixed;
+    top: 0;
+    height: 140px;
+  }
+
+  div.normal:first-of-type {
+    margin-top: 140px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  /* One row: Title inline with buttons */
+  #standingLogo {
+    height: 0px;
+  }
+  #standingLogo img {
+    display: none;
+  }
+  #inlineLogo {
+    display: block;
+    text-align: center;
+    min-width: 200px;
+  }
+  #inlineLogo img {
+    display: inline;
+    margin: auto;
+    height: 60px;
+    width: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  nav {
+    height: 70px;
+  }
+
+  .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: start;
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
+
+  .flex-item: {
+    margin: auto;
+    flex: 1;
+  }
+
+  div.normal:first-of-type {
+    margin-top: 70px;
+  }
+}
