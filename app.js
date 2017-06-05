@@ -1,49 +1,53 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+module.exports = function (port, subRoute) {
 
-var main = require('./routes/main');
-var users = require('./routes/users');
+  var express = require('express');
+  var path = require('path');
+  var favicon = require('serve-favicon');
+  var logger = require('morgan');
+  var cookieParser = require('cookie-parser');
+  var bodyParser = require('body-parser');
 
-var app = express();
+  var main = require('./routes/main');
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+  var app = express();
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+  // view engine setup
+  app.set('views', path.join(__dirname, 'views'));
+  app.set('view engine', 'pug');
 
-app.use('/static', express.static(__dirname + '/public'));
+  // uncomment after placing your favicon in /public
+  //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+  app.use(logger('dev'));
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(cookieParser());
 
-app.use('/', main);
-app.use('/users', users);
+  console.log(__dirname);
+  app.use('/static', express.static(__dirname + '/public'));
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+  app.use('/', main(subRoute));
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  // catch 404 and forward to error handler
+  app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+  });
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+  // error handler
+  app.use(function(err, req, res, next) {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-console.log("Serving page on port 3000");
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
+  });
 
-module.exports = app;
+  app.set('port', port);
+
+  console.log("Serving page at :" + port + subRoute);
+
+  return app;
+}

@@ -3,8 +3,10 @@
 /**
  * Module dependencies.
  */
+var port = 8080;
 
-var app = require('../app');
+var appModule = require('../app');
+var app = appModule(port,"/revolt");
 var debug = require('debug')('revolt:server');
 var http = require('http');
 
@@ -12,8 +14,8 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '8080');
-app.set('port', port);
+//var port = normalizePort(process.env.PORT || '8080');
+//app.set('port', port);
 
 /**
  * Create HTTP server.

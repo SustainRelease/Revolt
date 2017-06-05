@@ -1,20 +1,22 @@
-var express = require('express');
-var router = express.Router();
+module.exports = function (subRoute) {
+  var express = require('express');
+  var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', {});
-});
+  /* GET home page. */
+  console.log(subRoute + "/");
+  router.get(subRoute + '/', function(req, res, next) {
+    res.render('index', {subR: subRoute});
+  });
 
-/* GET about page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', {});
-});
+  /* GET about page. */
+  router.get(subRoute + '/about', function(req, res, next) {
+    res.render('about', {subR: subRoute});
+  });
 
-/* GET designers page. */
-router.get('/designers', function(req, res, next) {
-  res.render('designers', {});
-});
+  /* GET designers page. */
+  router.get(subRoute + '/designers', function(req, res, next) {
+    res.render('designers', {subR: subRoute});
+  });
 
-
-module.exports = router;
+  return router;
+}
