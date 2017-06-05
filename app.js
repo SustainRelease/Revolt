@@ -22,8 +22,7 @@ module.exports = function (port, subRoute) {
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(cookieParser());
 
-  console.log(__dirname);
-  app.use('/static', express.static(__dirname + '/public'));
+  app.use('/staticRev', express.static(__dirname + '/public'));
 
   app.use('/', main(subRoute));
 
@@ -42,7 +41,7 @@ module.exports = function (port, subRoute) {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    res.render('error', {subR: subRoute});
   });
 
   app.set('port', port);
