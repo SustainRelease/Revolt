@@ -2,6 +2,8 @@ extends layout
 
 block content
   div.normal#error
-    h1= message
-    h2= error.status
-    pre #{error.stack}
+    h1= error.status + " Error"
+    p Sorry, the page you have requested is not available
+    //h1= message
+    //h2= error.status
+    //pre #{error.stack}

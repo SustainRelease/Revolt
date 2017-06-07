@@ -91,11 +91,15 @@ img.profile {
 ********************************* */
 
 div.normal {
-  padding: 10px 40px 10px 40px;
+  padding: 10px 10%;
   border-top: 1px solid #303030;
   border-bottom: 1px solid #303030;
   color: #d0d0d0;
   text-align: justify;
+}
+
+div.normal.designer {
+  display: inline-block;
 }
 
 div.normal:nth-child(odd) {
@@ -147,4 +151,5 @@ p {
 ********************************* */
 div#error {
   overflow-x: auto;
+  /*padding: 20px 20%;*/
 }

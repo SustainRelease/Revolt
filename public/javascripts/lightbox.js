@@ -1,47 +1,63 @@
 var slideIndex = 1;
 var slideCounter = 0;
-var blocking = false;
-showSlide(slideIndex);
+var blocking = true;
+var uControl = false;
+
+
+function lightInit() {
+  var slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    if (i == slideIndex) {
+      slides[i].style.display = "block";
+    } else {
+      slides[i].style.display = "none";
+    }
+  }
+  uControl = true;
+  blocking = false;
+  slideCounter = 0;
+}
+
+lightInit();
 
 setInterval(function () {
   if (!blocking) {
     slideCounter += 1;
     if (slideCounter >= 5) {
-      plusSlides(1);
+      showSlide(slideIndex + 1);
     }
   }
 },1000);
 
 function plusSlides(n) {
-  if (!blocking) {
-    showSlide(slideIndex + n);
+  if (uControl) {
+    if (!blocking) {
+      showSlide(slideIndex + n);
+    }
   }
 }
 
 function showSlide(n) {
   blocking = true;
   var slides = document.getElementsByClassName("mySlides");
+
   var oldn = slideIndex;
-  var opac = 0;
   if (n >= slides.length) {n = 0}
   if (n < 0) {n = slides.length - 1}
   slideIndex = n;
-  //console.log("Old index: " + oldn);
-  //console.log("New index: " + n);
-
 
   var animCount = 0;
   var countN = 50;
-  var opacStart = 0.2;
+  var countUpStart = 10;
   var id = setInterval(frame, 5);
   var fadeOut = true;
   function frame() {
-    if (animCount == countN) {
+    if (animCount == countN + 1) {
       if (fadeOut) {
         slides[oldn].style.display = "none";
-        slides[n].style.opacity = opacStart.toString();
+        slides[n].style.opacity = "0";
         slides[n].style.display = "block";
-        animCount = Math.ceil(countN*opacStart);
+        animCount = countUpStart;
         fadeOut = false;
       } else {
         clearInterval(id);
