@@ -1,5 +1,27 @@
 extends ./layout.pug
 
 block content
-  div.normal
-    p You don't really want to be contacting me
+  div#contact.normal.flex-container.light
+    div.con-flex-item#contz
+      h1 Contact
+      div.con-row
+        i.fa.fa-phone.fa-2x.contPage
+        p +33 6 76 50 81 70
+      div.con-row
+        a(href="mailto:something@somewhere.com")
+          i.fa.fa-envelope.fa-2x.contPage
+          p something@somewhere.com
+      div.con-row
+        a(href="https://www.facebook.com/pg/revoltmex")
+          i.fa.fa-facebook.fa-2x.contPage
+          p www.facebook.com/pg/revoltmex
+      div.con-row
+        a(href="https://www.instagram.com/revoltmex/")
+          i.fa.fa-instagram.fa-2x.contPage
+          p www.instagram.com/revoltmex/
+    div.con-flex-item
+      h2 Revolt Boutique
+      p 32 rue du faubourg montmartre, 75009 Paris, France
+      div#googleMap
+      script(src="/staticRev/javascripts/map.js")
+      script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4uqN-9HI_jI4LagsFargGbp3zol6HLCo&callback=myMap")

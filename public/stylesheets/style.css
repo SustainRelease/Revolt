@@ -1,12 +1,64 @@
+/* *************************************
+------------GENERAL------------
+********************************* */
+
+
+@font-face {
+  font-family: "Poriet";
+  src: url("/staticRev/fonts/PoiretOne-Regular.ttf") format("truetype");
+}
+
 body {
   background-color: #000000;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 100% "Poriet", Helvetica, Arial, sans-serif;
   margin: 0px;
   padding: 0px;
+  width: 100%;
   height: auto;
   color: #d0d0d0;
-  overflow: auto;
+  overflow: none;
 }
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+h1 {  /* total height = 23 + 1 + 2*13 = 50px */
+  font-size: 1.7em;
+  line.height: 23px;
+  max-width: 200px;
+  border-bottom: 1px solid #555555;
+  margin: 13px 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 13px 0 0px;
+}
+
+p {
+  text-height: 1em;
+  margin-top: 10px 0px;
+}
+
+p:first-of-type {
+  margin-top: 5px;
+}
+
+i {
+  text-height: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 /* *************************************
 ---------NAVIGATION BAR-----------
@@ -19,6 +71,7 @@ nav {
   padding: 0px;
   margin: 0px;
   font-size: 1.4em;
+  font-weight: bold;
   border-bottom: 2px solid #303030;
   border-collapse: collapse;
   z-index: 10;
@@ -36,22 +89,17 @@ nav {
   margin: 0 auto;
 }
 
-.flex-container {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+#mainNav.flex-container {
     width: 100%;
-    height: auto;
     border-top: 1px solid #303030;
     border-collapse: collapse;
 }
 
-.flex-item {
+.nav-flex-item {
     height: 70px;
     border-left: 1px solid #303030;
     border-right: 1px solid #303030;
+    border-top: 1px solid #303030;
     border-collapse: collapse;
     padding: auto;
     margin: 0;
@@ -73,9 +121,8 @@ nav {
     display: none;
 }
 
-a {
+nav a {
   color: #ffffff;
-  text-decoration: none;
   margin: 0px 5px;
 }
 
@@ -87,7 +134,7 @@ img.profile {
 }
 
 /* *************************************
-------------SECTIONS-------------
+------------GENERAL SECTIONS-------------
 ********************************* */
 
 div.normal {
@@ -98,19 +145,156 @@ div.normal {
   text-align: justify;
 }
 
+div.banner {
+  display: block;
+  max-width: 100%;
+  padding: none;
+}
+
+div.dark {
+  background-image: url("/staticRev/images/fab_dark.png");
+  /*background-color: #100010;*/
+
+}
+
+div.light {
+  background-image: url("/staticRev/images/fab_light.png");
+  color: black;
+  font-weight: bold;
+  /*background-color: #050015;*/
+}
+
+div.large p {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+
+/* *************************************
+-----------HOME-----------
+********************************* */
+img.banner {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+
 div.normal.designer {
   display: inline-block;
 }
 
-div.normal:nth-child(odd) {
-  background-color: #100010;
+/* *************************************
+-----------DESIGNERS-----------
+********************************* */
+
+
+#designers.flex-container {
+  padding: 2%;
+}
+
+.des-flex-item {
+  width: 28%;
+  margin: auto 2%;
+  text-align: center;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.linkHolder {
+  height: 100%;
+  padding: 10% 0;
+}
+
+.des-flex-item a {
 
 }
 
-div.normal:nth-child(even) {
-  background-color: #050015;
+.des-flex-item a:hover {
+  opacity: 0.7;
 }
 
+.des-flex-item a img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  opacity: inherit:
+}
+
+.des-flex-item.noBorder a img {
+  border: none;
+}
+
+/* *************************************
+--------------ABOUT-------------
+********************************* */
+
+#genialDiv {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+#genialDiv iframe#genial {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* *************************************
+-----------CONTACT------------
+********************************* */
+#contact.flex-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.con-flex-item {
+    flex: 1;
+    text-align: left;
+}
+
+#googleMap {
+  width:100%;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.con-row {
+  height: 32px;
+  margin: 4px 0;
+}
+
+.con-row a:hover {
+  opacity: 0.7;
+}
+
+i.contPage {
+  style: inline;
+  float: left;
+  margin-right: 10px;
+  width: 30px;
+  padding: 0 10px;
+  text-align: center;
+  opacity: inherit;
+}
+
+.con-row p {
+  text-height: 1.5em;
+  line-height: 2em;
+  margin: auto 0;
+  opacity: inherit;
+}
+
+/* *************************************
+--------------FOOTER-------------
+********************************* */
 div#end {
   padding: 10px 40px 30px 40px;
   border-top: 1px solid #303030;
@@ -119,31 +303,57 @@ div#end {
   color: #d0d0d0;
 }
 
-div.large p {
+
+/* https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
+
+/* Colour Icons */
+/*foot .single.fa {
+  padding: 5px;
+  width: 15px;
+  margin: 5px 2px;
   text-align: center;
-  font-size: 20px;
+  text-decoration: none;
+  border-radius: 50%;
 }
 
-h1 {  /* total height = 23 + 1 + 2*13 = 50px */
-  font-size: 20px;
-  line.height: 23px;
-  max-width: 200px;
-  border-bottom: 1px solid #555555;
-  margin: 13px 0;
+foot .single.fa-2x {
+  padding: 10px;
+  width: 32px;
+  margin: 5px 4px;
 }
 
-img.designer {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 1px solid black;
-  margin-bottom: 20px;
+foot .colour.fa-facebook {
+  background: #3B5998;
+  color: white;
 }
 
-p {
-  text-height: 15px;
+foot .colour.fa-twitter {
+  background: #55ACEE;
+  color: white;
 }
+
+foot .colour.fa-instagram {
+  background: #125688;
+  color: white;
+} */
+
+foot i {
+  color: black;
+  opacity: inherit;
+}
+
+foot i.fa-circle {
+  color: white;
+}
+
+foot a.fa-stack:hover {
+  opacity: 0.7;
+}
+
+foot p:first-of-type {
+  margin-top: 20px;
+}
+
 
 
 /* *************************************

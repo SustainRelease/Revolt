@@ -24,7 +24,8 @@ module.exports = function (port, subRoute) {
 
   app.use('/staticRev', express.static(__dirname + '/public'));
 
-  app.use('/', main(subRoute));
+  console.log(subRoute);
+  app.use(subRoute, main(subRoute));
 
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {

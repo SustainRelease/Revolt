@@ -1,20 +1,9 @@
 extends ./layout.pug
 
 block content
-    div(class="large normal")
-      p Revolt amène l'ethical fashion dans la capitale parisienne et vous propose de découvrir des créateurs mexicains soucieux de leur communauté et de l'environnement
-    div#myModal.modal
-      .modal-content
-        .mySlides(name = "img1")
-          img.slide(src="/staticRev/images/img1.jpg")
-        .mySlides(name = "img2")
-          img.slide(src="/staticRev/images/img2.jpg")
-        .mySlides(name = "img3")
-          img.slide(src="/staticRev/images/img3.jpg")
-        .mySlides(name = "img4")
-          img.slide(src="/staticRev/images/img4.jpg")
-
-        a.prev(onclick="plusSlides(-1)") &#10094;
-        a.next(onclick="plusSlides(1)") &#10095;
-        
-    script(src='/staticRev/javascripts/lightbox.js')
+    div.banner#first
+      img.banner(src="/staticRev/images/fbBanner.jpg" alt="Revolt Banner")
+    div.normal.dark.large
+      p En la vida no se puede controlar lo que pasa a tu alrededor, lo único que puedes controlar es como tu reaccionas ante las circunstancias y Revolt es la respuesta a un presidente que quiere construir un muro. 
+      p Nuestras sociedades, nuestras relaciones no necesitan muros de ningún tipo, sino simplemente necesitamos dar más amor.
+      p Nuestro objetivo es simple: inspirar a la sociedad a cambiar paradigmas y consumir moda siendo 100% responsable.
