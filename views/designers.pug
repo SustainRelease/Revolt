@@ -2,27 +2,43 @@ extends ./layout.pug
 
 block content
   div.flex-container.normal#designers.dark
-    div.des-flex-item
-      div.linkHolder
-        a(href="https://www.genuinamarket.com/")
-          img(src="/staticRev/images/Des_GM_Logo.png" alt="Genuina Market")
-    div.des-flex-item
-      div.linkHolder
-        a(href="https://mx.acapellastore.com/")
-          img(src="/staticRev/images/Des_AC_Logo.jpg" alt="Acapella")
-    div.des-flex-item.noBorder
-      div.linkHolder
-        a(href="https://www.bohetnika.com")
-          img(src="/staticRev/images/Des_BO_Logo.png" alt="Bohetnika")
-    div.des-flex-item
-      div.linkHolder
-        a(href="https://www.facebook.com/santegomx/")
-          img(src="/staticRev/images/Des_SA_Logo.jpg" alt="Santego")
-    div.des-flex-item
-      div.linkHolder
-        a(href="https://www.facebook.com/Lila-Torrero-Joyer%C3%ADa-438176519694711/")
-          img(src="/staticRev/images/Des_LT_Logo.jpg" alt="Lila-Torrero")
-    div.des-flex-item
+    div.des-flex-item#CC
       div.linkHolder
         a(href="http://www.carolinacrowley.com")
-          img(src="/staticRev/images/Des_CC_Logo.jpg" alt="Carolina Crowley")
+          picture
+            source(srcset="/staticRev/images/Des_CC_Logo_250.jpg" media="(max-width: 480px)")
+            source(srcset="/staticRev/images/Des_CC_Logo_450.jpg")
+            img(src="/staticRev/images/Des_CC_Logo_450.jpg" alt="Carolina Crowley")
+    div.des-flex-item#AC
+      div.linkHolder
+        a(href="https://mx.acapellastore.com/")
+          picture
+            source(srcset="/staticRev/images/Des_AC_Logo_250.jpg" media="(max-width: 480px)")
+            source(srcset="/staticRev/images/Des_AC_Logo_450.jpg")
+            img(src="/staticRev/images/Des_AC_Logo_450.jpg" alt="Acapella")
+    div.des-flex-item#GM
+      div.linkHolder
+        a(href="https://www.genuinamarket.com/")
+          picture
+            source(srcset="/staticRev/images/Des_GM_Logo_300.png")
+            img(src="/staticRev/images/Des_GM_Logo_300.png" alt="Genuina Market")
+    div.des-flex-item.noBorder#BO
+      div.linkHolder
+        a(href="https://www.bohetnika.com")
+          picture
+            source(srcset="/staticRev/images/Des_BO_Logo_250.png")
+            img(src="/staticRev/images/Des_BO_Logo_250.png" alt="Bohetnika")
+    div.des-flex-item#SA
+      div.linkHolder
+        a(href="https://www.facebook.com/santegomx/")
+          picture
+            source(srcset="/staticRev/images/Des_SA_Logo_250.jpg" media="(max-width: 480px)")
+            source(srcset="/staticRev/images/Des_SA_Logo_450.jpg")
+            img(src="/staticRev/images/Des_SA_Logo_450.jpg" alt="Santego")
+    div.des-flex-item#LT
+      div.linkHolder
+        a(href="https://www.facebook.com/Lila-Torrero-Joyer%C3%ADa-438176519694711/")
+          picture
+            source(srcset="/staticRev/images/Des_LT_Logo_250.jpg" media="(max-width: 480px)")
+            source(srcset="/staticRev/images/Des_LT_Logo_450.jpg")
+            img(src="/staticRev/images/Des_LT_Logo_450.jpg" alt="Lila-Torrero")

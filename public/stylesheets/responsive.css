@@ -6,34 +6,34 @@
   #middleRow .shifters{
     display: block;
   }
-  
-  /*
-  img.designer {
-    display: inline;
-    width: 200px;
-    height: auto;
-    margin: 0 0 20px 0;
-  }*/
-
-  div.normal.dark img.designer {
-    float: right;
-    margin-left: 20px;
-  }
-
-  div.normal.light img.designer {
-    float: left;
-    margin-right: 20px;
-  }
 
   div.normal {
     text-align: left;
   }
 
-  #myModal {
-    height: 400px;
-    margin: 0;
-    padding: 50px 10%;
+  .des-flex-item {
+    width: 28%;
   }
+
+  #BO {
+    order: 1;
+  }
+  #SA {
+    order: 2;
+  }
+  #GM {
+    order: 3;
+  }
+  #CC {
+    order: 4;
+  }
+  #LT {
+    order: 5;
+  }
+  #AC {
+    order: 6;
+  }
+
 }
 
 @media screen and (min-width: 660px) {
@@ -48,10 +48,11 @@
     margin-top: 140px;
   }
 
-  #myModal {
-    height: 450px;
-    margin: 0;
-    padding: 50px 10%;
+  .con-flex-item#contz {
+    width: 300px;
+  }
+  .con-flex-item#map{
+    flex: 1.5;
   }
 }
 
@@ -89,12 +90,19 @@
     flex-wrap: nowrap;
   }
 
-  .flex-item: {
-    margin: auto;
-    flex: 1;
-  }
-
   div.normal:first-of-type, div#first {
     margin-top: 70px;
+  }
+
+  #contact.flex-container {
+      padding: 20px 5%;
+      width: 90%;
+  }
+
+  .con-flex-item#contz {
+    margin-right: 5%;
+  }
+  .con-flex-item#map{
+    max-width: 600px;
   }
 }

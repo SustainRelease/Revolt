@@ -1,9 +1,14 @@
 extends ./layout.pug
 
 block content
-    div.banner#first
-      img.banner(src="/staticRev/images/fbBanner.jpg" alt="Revolt Banner")
-    div.normal.dark.large
-      p En la vida no se puede controlar lo que pasa a tu alrededor, lo único que puedes controlar es como tu reaccionas ante las circunstancias y Revolt es la respuesta a un presidente que quiere construir un muro. 
-      p Nuestras sociedades, nuestras relaciones no necesitan muros de ningún tipo, sino simplemente necesitamos dar más amor.
-      p Nuestro objetivo es simple: inspirar a la sociedad a cambiar paradigmas y consumir moda siendo 100% responsable.
+    div#home
+      div.banner.full#first
+        picture.banner
+          source(srcset="/staticRev/images/fbBanner_480.jpg" media="(max-width: 480px)")
+          source(srcset="/staticRev/images/fbBanner_700.jpg" media="(max-width: 700px)")
+          source(srcset="/staticRev/images/fbBanner_1500.jpg")
+          img(src="/staticRev/images/fbBanner_1500.jpg" alt="Revolt Banner")
+      div.normal.dark.large
+        p En la vida no se puede controlar lo que pasa a tu alrededor, lo único que puedes controlar es como tu reaccionas ante las circunstancias y Revolt es la respuesta a un presidente que quiere construir un muro. 
+        p Nuestras sociedades, nuestras relaciones no necesitan muros de ningún tipo, sino simplemente necesitamos dar más amor.
+        p Nuestro objetivo es simple: inspirar a la sociedad a cambiar paradigmas y consumir moda siendo 100% responsable.
