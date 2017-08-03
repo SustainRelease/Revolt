@@ -1,5 +1,34 @@
 extends ./layout.pug
 
 block content
-  div.normal
-    h1 Products
+  div#products.normal.center.light
+    h1.center Products
+    div.flex-container
+      div.flex-item
+        button.clean#butWom(onClick="setType('Wom');") Woman
+      div.flex-item
+        button.clean#butMan(onClick="setType('Man');") Man
+      div.flex-item
+        button.clean#butAcc(onClick="setType('Acc');") Accessories
+    div.productBox.flex-container#pbWom
+      each photo in photos.Woman
+        div.flex-item.productPhoto
+          img(src="/staticRev/images/Wom_" + photo)
+      each photo in photos.Uni
+        div.flex-item.productPhoto
+          img(src="/staticRev/images/Uni_" + photo)
+    div.productBox.flex-container#pbMan
+      each photo in photos.Man
+        div.flex-item.productPhoto
+          img(src="/staticRev/images/Man_" + photo)
+      each photo in photos.Uni
+        div.flex-item.productPhoto
+          img(src="/staticRev/images/Uni_" + photo)
+    div.productBox.flex-container#pbAcc
+      each photo in photos.Acc
+        div.flex-item.productPhoto
+          img(src="/staticRev/images/Acc_" + photo)
+
+
+  script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+  script(type="text/javascript" src="/staticRev/javascripts/products.js")

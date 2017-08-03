@@ -1,6 +1,7 @@
 module.exports = function (subRoute) {
   var express = require('express');
   var router = express.Router();
+  var photos = require("../data/photos.json");
 
   /* GET home page. */
   router.get('/', function(req, res, next) {
@@ -18,7 +19,7 @@ module.exports = function (subRoute) {
   });
 
   router.get('/products', function(req, res, next) {
-    res.render('products', {subR: subRoute});
+    res.render('products', {subR: subRoute, photos: photos});
   });
 
   router.get('/contact', function(req, res, next) {
