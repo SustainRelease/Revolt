@@ -1,22 +1,22 @@
 {
   "Woman": [
-    "BO_1.jpg",
-    "Bo_2.jpg",
-    "BO_4.jpg",
-    "GM_Sarapetee.jpg"
+    "BO_1",
+    "BO_2",
+    "BO_4",
+    "GM_Sarapetee"
   ],
   "Man": [
-    "SA_Cactus.jpg",
-    "SA_Flores.jpg",
-    "SA_Frutas.jpg"
+    "SA_Cactus",
+    "SA_Flores",
+    "SA_Frutas"
   ],
   "Uni": [
-    "AC_Frida.jpg",
-    "AC_Obama.jpg",
-    "AC_Revolt.jpg"
+    "AC_Frida",
+    "AC_Obama",
+    "AC_Revolt"
   ],
   "Acc": [
-    "LT_Collares.jpg",
-    "LT_Perla.jpg"
+    "LT_Collares",
+    "LT_Perla"
   ]
 }

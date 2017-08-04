@@ -1,7 +1,7 @@
 extends ./layout.pug
 
 block content
-  div#products.normal.center.light
+  div#products.normal.wide.center.light
     h1.center Products
     div.flex-container
       div.flex-item
@@ -13,21 +13,21 @@ block content
     div.productBox.flex-container#pbWom
       each photo in photos.Woman
         div.flex-item.productPhoto
-          img(src="/staticRev/images/Wom_" + photo)
+          img(src="/staticRev/images/Wom_" + photo + "_500.jpg" alt=photo)
       each photo in photos.Uni
         div.flex-item.productPhoto
-          img(src="/staticRev/images/Uni_" + photo)
+          img(src="/staticRev/images/Uni_" + photo + "_500.jpg" alt=photo)
     div.productBox.flex-container#pbMan
       each photo in photos.Man
         div.flex-item.productPhoto
-          img(src="/staticRev/images/Man_" + photo)
+          img(src="/staticRev/images/Man_" + photo + "_500.jpg" alt=photo)
       each photo in photos.Uni
         div.flex-item.productPhoto
-          img(src="/staticRev/images/Uni_" + photo)
+          img(src="/staticRev/images/Uni_" + photo + "_500.jpg" alt=photo)
     div.productBox.flex-container#pbAcc
       each photo in photos.Acc
         div.flex-item.productPhoto
-          img(src="/staticRev/images/Acc_" + photo)
+          img(src="/staticRev/images/Acc_" + photo + "_500.jpg" alt=photo)
 
 
   script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
