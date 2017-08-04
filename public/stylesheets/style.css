@@ -380,12 +380,20 @@ i.contPage {
   align-items: center;
 }
 
-
 #products div.flex-item.productPhoto {
-  min-width: 400px;
+  min-width: 200px;
   max-width: 500px;
-  margin: 30px;
+  margin: 10px;
 }
+@media screen and (min-width: 480px) {
+  #products div.flex-item.productPhoto {
+    min-width: 400px;
+    max-width: 500px;
+    margin: 30px;
+  }
+}
+
+
 #products div.productPhoto img {
   width: 98%;
   height: auto;
